@@ -1,0 +1,33 @@
+.outer{
+  background-color: black;
+  overflow: auto;
+  margin-top: 20px;
+  height: 500px;
+}
+.inner{
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+}
+.m-text{
+  font-weight: bold;
+}
+.custom{
+  margin: 2.5px;
+}
+.text-custom{
+  margin: 5px;
+}
+.m-text{
+  margin: 5px;;
+}
+
+@media screen and (max-width: 800px){
+  .outer{
+      height: 500px; 
+  }
+  .m-text{
+      font-size: medium;
+      font-weight: bold;
+  }
+}

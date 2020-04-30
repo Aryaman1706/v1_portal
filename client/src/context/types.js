@@ -1,0 +1,12 @@
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const GET_MESSAGES = 'GET_MESSAGES';
+export const USER_LOADED = 'USER_LOADED';
+export const LOGOUT = 'LOGOUT';
+export const UPDATE_USER = 'UPDATE_USER';
+export const ADD_SUCCESS = 'ADD_SUCCESS';
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const EDIT_SUCCESS = 'EDIT_SUCCESS';
+export const STAR_SUCCESS = 'STAR_SUCCESS';
+export const UNSTAR_SUCCESS = 'UNSTAR_SUCCESS';
+export const MY_MESSAGES = 'MY_MESSAGES';
