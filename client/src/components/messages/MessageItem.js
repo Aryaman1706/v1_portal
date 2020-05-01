@@ -12,13 +12,12 @@ const MessageItem = (props) => {
 
     const { deleteMessage, setCurrent } = messageContext;
 
-    const { user, starMessage, unstarMessage, loadUser } = authContext;
+    const { user, starMessage, unstarMessage, loadUser, staredMessages } = authContext;
 
     useEffect(()=>{
         loadUser();
     },[])
-    
-    const { position, staredMessages } = user;
+
 
     const { _id, subject, statement, to, from, date } = props.message;
 
@@ -32,6 +31,11 @@ const MessageItem = (props) => {
     };
 
     const stared = (id) => {
+        
+        if(staredMessages === null ) {
+            return false;
+        }
+
         var length = staredMessages.length;
         var i;
         for ( i=0; i<length; i++ ) {
@@ -119,7 +123,7 @@ const MessageItem = (props) => {
 
     return(
         <Fragment>
-            {user === null ? <Spinner /> : position===from ? positionLinks : memberLinks }
+            { user === null ? <Spinner /> : user.position===from ? positionLinks : memberLinks }
         </Fragment>
     );
 

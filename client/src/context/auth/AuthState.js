@@ -104,10 +104,12 @@ const AuthState = props => {
 
     // STAR MESSAGE
     const starMessage = async (id) => {
+        
         axios.put (`/api/user/star/${id}`);
 
         dispatch({
-            type: STAR_SUCCESS
+            type: STAR_SUCCESS,
+            payload: JSON.parse(localStorage.getItem('current'))
         });
     };
 

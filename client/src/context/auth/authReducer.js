@@ -54,7 +54,7 @@ export default (state, action) => {
         case STAR_SUCCESS:
             return {
                 ...state,
-                staredMessages: [ JSON.parse(localStorage.getItem('current')), ...state.staredMessages  ]
+                staredMessages: [ action.payload, ...state.staredMessages ]
             };
 
         case UNSTAR_SUCCESS:

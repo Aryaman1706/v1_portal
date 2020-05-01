@@ -13,7 +13,7 @@ const router=express.Router();
 // get all the for my position messages
 router.get('/',auth,async(req,res)=>{
   // console.log(req.user.position);
-  const messages=await Message.find({to: req.user.position}).sort('-date').limit(30);
+  const messages=await Message.find({to: req.user.position}).sort('date').limit(30);
   res.send(messages);
 });
 

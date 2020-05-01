@@ -14,7 +14,6 @@ import {
 const MessageState = props => {
     const initialState = {
         messages:[],
-        current: null,
         myMessages: null
     };
 
@@ -99,7 +98,6 @@ const MessageState = props => {
         <MessageContext.Provider
           value={{
             messages: state.messages,
-            current: state.current,
             myMessages: state.myMessages,
             getMessages,
             addMessage,

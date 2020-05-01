@@ -14,11 +14,8 @@ const StaredMessages = () => {
         // eslint-disable-next-line
     },[]);
 
-    console.log(staredMessages);
-
     return (
         <Fragment>
-
         { staredMessages ? 
             <Fragment>
             { staredMessages.map( message => 
